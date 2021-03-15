@@ -1,4 +1,4 @@
-package com.example.conference.models;
+package com.cognizant.truyum.models;
 
 public class Registration {
     private String Name;

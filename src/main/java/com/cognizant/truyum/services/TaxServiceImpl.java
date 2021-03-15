@@ -1,6 +1,6 @@
-package com.example.conference.services;
+package com.cognizant.truyum.services;
 
-import com.example.conference.models.UserClaim;
+import com.cognizant.truyum.models.UserClaim;
 import org.springframework.stereotype.Service;
 
 @Service

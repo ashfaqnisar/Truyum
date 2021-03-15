@@ -1,4 +1,4 @@
-package com.example.conference.controllers;
+package com.cognizant.truyum.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

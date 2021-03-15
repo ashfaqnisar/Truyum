@@ -1,4 +1,4 @@
-package com.example.conference.models;
+package com.cognizant.truyum.models;
 
 import org.springframework.stereotype.Component;
 

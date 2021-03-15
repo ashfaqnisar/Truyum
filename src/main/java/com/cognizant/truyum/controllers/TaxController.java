@@ -1,7 +1,7 @@
-package com.example.conference.controllers;
+package com.cognizant.truyum.controllers;
 
-import com.example.conference.models.UserClaim;
-import com.example.conference.services.TaxService;
+import com.cognizant.truyum.models.UserClaim;
+import com.cognizant.truyum.services.TaxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

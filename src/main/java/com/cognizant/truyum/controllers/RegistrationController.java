@@ -1,6 +1,6 @@
-package com.example.conference.controllers;
+package com.cognizant.truyum.controllers;
 
-import com.example.conference.models.Registration;
+import com.cognizant.truyum.models.Registration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;

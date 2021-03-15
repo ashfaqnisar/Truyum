@@ -1,4 +1,4 @@
-package com.example.conference;
+package com.cognizant.truyum;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
