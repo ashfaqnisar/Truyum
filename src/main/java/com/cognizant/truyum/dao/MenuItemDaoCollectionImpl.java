@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MenuItemDaoCollectionImpl implements MenuItemDao {
 
-    private List<MenuItem> menuItemList;
+    static private List<MenuItem> menuItemList;
 
     public MenuItemDaoCollectionImpl() throws ParseException {
         if (menuItemList == null) {

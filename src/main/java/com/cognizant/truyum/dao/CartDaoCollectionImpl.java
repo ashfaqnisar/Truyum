@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class CartDaoCollectionImpl implements CartDao {
-    private HashMap<Long, Cart> userCarts;
+    static private HashMap<Long, Cart> userCarts;
 
     public CartDaoCollectionImpl() {
         if (userCarts == null) {
-            userCarts = new HashMap<>();
+            userCarts = new HashMap<Long, Cart>();
         }
     }
 
