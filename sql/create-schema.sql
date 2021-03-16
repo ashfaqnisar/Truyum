@@ -3,25 +3,26 @@ use truYum;
 show tables;
 create table if not exists menu_item
 (
-    item_name      varchar(30) not null,
-    price          int,
-    active_status  enum ('Yes', 'No'),
-    date_of_launch date,
-    category       varchar(30),
-    free_delivery  enum ('Yes','No'),
-    item_id        int primary key
+    me_id             int(30) primary key,
+    me_name           varchar(100),
+    me_price          int,
+    me_active         varchar(3),
+    me_date_of_launch date,
+    me_category       varchar(45),
+    me_free_delivery  varchar(3)
 );
-create table if not exists users
+
+create table if not exists user
 (
-    user_id   int primary key,
-    user_name varchar(30)
+    us_id   int primary key,
+    us_name varchar(30)
 );
 
 create table if not exists cart
 (
-    cart_id int primary key,
-    user_id int not null,
-    item_id int not null,
-    foreign key (user_id) references users (user_id),
-    foreign key (item_id) references menu_item (item_id)
+    ct_id    int primary key,
+    ct_us_id int not null,
+    ct_pr_id int not null,
+    foreign key (ct_us_id) references user (us_id),
+    foreign key (ct_pr_id) references menu_item (me_id)
 );
