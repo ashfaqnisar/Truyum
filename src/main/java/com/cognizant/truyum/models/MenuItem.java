@@ -1,13 +1,37 @@
 package com.cognizant.truyum.models;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "menu_item")
 public class MenuItem {
-    private long id;
-    private String name, category;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "me_id")
+    private Long id;
+
+    @Column(name = "me_name")
+    private String name;
+
+    @Column(name = "me_price", columnDefinition = "decimal(10,2)")
     private float price;
-    private boolean active, freeDelivery;
+
+    @Column(name = "me_active")
+    private boolean active;
+
+    @Column(name = "me_date_of_launch")
     private Date dateOfLaunch;
+
+    @Column(name = "me_category")
+    private String category;
+
+    @Column(name = "me_free_delivery")
+    private boolean freeDelivery;
+
+    public MenuItem() {
+    }
 
     public long getId() {
         return id;
@@ -82,7 +106,7 @@ public class MenuItem {
 
         MenuItem menuItem = (MenuItem) o;
 
-        return id == menuItem.id;
+        return id.equals(menuItem.id);
     }
 
     @Override

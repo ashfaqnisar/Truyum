@@ -2,11 +2,11 @@ use truyum;
 
 /*Inserting Data Into the tables*/
 insert into menu_item(me_id, me_name, me_price, me_active, me_date_of_launch, me_category, me_free_delivery)
-values (1, 'Sandwich', 99.00, 'Yes', '2017-03-15', 'Main Course', 'Yes'),
-       (2, 'Burger', 129.00, 'Yes', '2017-12-23', 'Main Course', 'No'),
-       (3, 'Pizza', 149.00, 'Yes', '2017-08-21', 'Main Course', 'No'),
-       (4, 'French Fries', 57.00, 'No', '2017-07-02', 'Starters', 'No'),
-       (5, 'Chocolate Brownie', 32.00, 'Yes', '2017-11-02', 'Dessert', 'Yes');
+values (1, 'Sandwich', 99.00, true, '2017-03-15', 'Main Course', true),
+       (2, 'Burger', 129.00, true, '2017-12-23', 'Main Course', false),
+       (3, 'Pizza', 149.00, true, '2017-08-21', 'Main Course', false),
+       (4, 'French Fries', 57.00, false, '2017-07-02', 'Starters', false),
+       (5, 'Chocolate Brownie', 32.00, true, '2017-11-02', 'Dessert', true);
 
 insert into user(us_id, us_name)
 values (4260, 'Admin'),
@@ -22,7 +22,7 @@ values (4260, 01, 01),
 /*Get Menu Items after the the launch date and active status*/
 select *
 from menu_item
-where me_active = 'Yes'
+where me_active = true
   and me_date_of_launch > '2017-03-15';
 
 /**/

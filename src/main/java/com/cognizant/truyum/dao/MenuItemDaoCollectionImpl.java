@@ -1,35 +1,20 @@
 package com.cognizant.truyum.dao;
 
 import com.cognizant.truyum.models.MenuItem;
-import com.cognizant.truyum.util.DateUtil;
+import org.springframework.stereotype.Component;
 
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+
+@Component("menuItemDao")
 public class MenuItemDaoCollectionImpl implements MenuItemDao {
 
-    static private List<MenuItem> menuItemList;
+    private List<MenuItem> menuItemList;
 
-    public MenuItemDaoCollectionImpl() throws ParseException {
-        if (menuItemList == null) {
-            menuItemList = new ArrayList<>();
-
-            MenuItem item1 = new MenuItem(1L, "Sandwich", "Main Course", 99.00f, true,
-                    true, DateUtil.convertToDate("15/03/2017"));
-            MenuItem item2 = new MenuItem(2L, "Burger", "Main Course", 129.00f, true,
-                    false, DateUtil.convertToDate("15/03/2017"));
-            MenuItem item3 = new MenuItem(3L, "Pizza", "Main Course", 149.00f, true,
-                    false, DateUtil.convertToDate("15/03/2017"));
-            MenuItem item4 = new MenuItem(4L, "French Fries", "Starters", 57.00f, false,
-                    true, DateUtil.convertToDate("15/03/2017"));
-            MenuItem item5 = new MenuItem(5L, "Brownie", "Dessert", 32.00f, true,
-                    true, DateUtil.convertToDate("15/03/2017"));
-
-            menuItemList.addAll(Arrays.asList(item1, item2, item3, item4, item5));
-        }
+    public void setMenuItemList(List<MenuItem> menuItemList) {
+        this.menuItemList = menuItemList;
     }
 
     @Override

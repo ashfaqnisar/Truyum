@@ -1,11 +1,17 @@
 package com.cognizant.truyum.dao;
 
+import com.cognizant.truyum.TruyumApp;
 import com.cognizant.truyum.models.MenuItem;
 import com.cognizant.truyum.util.DateUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.ParseException;
 
 public class MenuItemDaoCollectionImplTest {
+    private static final Logger LOGGER = LoggerFactory.getLogger(TruyumApp.class);
+
+
     public static void main(String[] args) throws ParseException {
         testGetMenuItemListAdmin();
         testGetMenuItemListCustomer();
